@@ -15,29 +15,32 @@ read opcion
 clear
 
 if [ "$opcion" == 1 ]; then
-	echo "Ingrese nombre del archivo: "
-	read archivo
-	touch $HOME/$archivo
-	echo "Archivo creado. Ruta asignada: "$HOME/$Documents/$archivo
+	echo "Ingrese la ruta: "
+	read ruta
+	# touch $ruta
+	echo "Archivo creado. Ruta asignada: "/$ruta
 
 
 
 elif [ "$opcion" == 2 ]; then
 	echo "Ingrese la ruta de carpeta: "
 	read ruta
-	rmdir $ruta
+	# rmdir $ruta
 	echo "La carpeta fue eliminada"
 
 
 elif [ "$opcion" == 3 ]; then
-	echo "Ingrese nombre de carpeta: "
-	read carpeta
-	mkdir $HOME/$carpeta
-	echo "Carpeta creada. Ruta asignada: "$HOME/$Documents/$carpeta
+	echo "Ingrese la ruta: "
+	read ruta
+	# mkdir $ruta
+	echo "Carpeta creada. Ruta asignada: "$ruta
 
 
 elif [ "$opcion" == 4 ]; then
 	exit
 
 	echo "Adios"
+
+elif [ "$opcion" =! ]; then
+    echo "Opcion no valida"
 fi
